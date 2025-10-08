@@ -1,0 +1,296 @@
+/* === Layout Structure === */
+h1, h2 {
+    margin: 0 0 12px 0;
+}
+
+.sub-header {
+    font-size: 28px;
+    font-weight: 700;
+    color: navy;
+    text-align: center;
+    padding: 12px 0;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 2px rgba(161, 145, 240, 0.1);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: white;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.header {
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: navy;
+    padding: 16px 0px;
+    box-shadow: inset 0 -4px 6px -6px black;
+    background: linear-gradient(90deg, #90caf9, navy);
+    background-size: 200% 100%;
+    transition: background-position 1s ease;
+}
+
+.header:hover {
+    background-position: -100% 0;
+    color: white;
+}
+
+.container {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    max-width: 952px;
+    gap: 24px;
+}
+
+.section {
+    flex: 1;
+    background-color: #f9fafb;
+    border: 2px solid #ddd;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.photo-description {
+    background: linear-gradient(90deg, navy, royalblue);
+    padding: 8px;
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    animation: glow 3s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    0% { box-shadow: 0 0 5px rgba(0, 0, 255, 0.5); }
+    50% { box-shadow: 0 0 15px rgba(0, 0, 255, 0.8); }
+    100% { box-shadow: 0 0 5px rgba(0, 0, 255, 0.5); }
+}
+
+.group-photo {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 8px;
+    margin-top: 16px;
+}
+
+/* === Info Section === */
+.member-profile,
+.info-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+ul#group-info {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul#group-info li {
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.member-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 14px;
+}
+
+strong {
+    color: black;
+}
+
+/* === Member Cards === */
+.card-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.member-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.member-avatar:hover,
+.member-card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+}
+
+.member-name {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.member-studentId {
+    font-size: 16px;
+    color: gray;
+}
+
+.profile-button {
+    background-color: transparent;
+    border: none;
+    color: navy;
+    font-weight: 700;
+}
+.profile-button:hover {
+    color: royalblue;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* === Member Profile === */
+.member-avatar {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#member-details {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-size: 24px;
+}
+#member-details li {
+    margin-bottom: 8px;
+    color: gray;
+}
+
+.back-button {
+    flex: 1;
+    background-color: navy;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 24px 48px;
+    font-size: 18px;
+    font-weight: 800;
+    align-self: center;
+    margin-top: 16px;
+}
+
+.back-button:hover {
+    background-color: royalblue;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* === Responsive Design === */
+
+/* Medium screens (tablets, ≤1024px) */
+@media (max-width: 1024px) {
+  .container {
+    padding: 16px;
+    max-width: 90%;
+  }
+
+  .sub-header {
+    font-size: 24px;
+  }
+
+  .photo-description {
+    font-size: 16px;
+  }
+
+  .member-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .profile-button {
+    align-self: flex-end;
+  }
+}
+
+/* Small screens (phones, ≤768px) */
+@media (max-width: 768px) {
+  .info-section {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .sub-header {
+    font-size: 22px;
+  }
+
+  .group-photo {
+    height: auto;
+    object-fit: contain; /* avoid cropping on small screens */
+  }
+
+  .member-card {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .header h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .header p {
+    font-size: 16px;
+    text-align: center;
+  }
+}
+
+/* Very small devices (≤480px) */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  .sub-header {
+    font-size: 18px;
+  }
+
+  .info-section {
+    gap: 8px;
+  }
+
+  .member-name {
+    font-size: 16px;
+  }
+
+  .member-studentId {
+    font-size: 14px;
+  }
+
+  .back-button {
+    width: 100%;
+    padding: 16px;
+  }
+}

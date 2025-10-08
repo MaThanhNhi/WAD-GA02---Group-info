@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="default.css">
+      <title>NHN Group Information</title>
+  </head>
+
+  <body>
+    <div class="header">
+      <h1>NHN Group Information</h1>
+      <p>Welcome to the NHN Group information page.</p>
+    </div>
+
+    <div class="container">
+      <div class="image-section">
+        <div class="section">
+          <div class="sub-header">Our Team</div>
+          <div class="photo-description">
+            <p>Click on any team member to view their profile !!!</p>
+          </div>
+          <img id="photo" src="./images/22120094_22120253_22120256.png" alt="NHN Group Photo" class="group-photo" usemap="#team-map">
+          <map name="team-map">
+            <area shape="circle" coords="252,186,162" alt="Nguyễn Minh Nhật" href="./members/22120253/22120253.html" title="Nguyễn Minh Nhật">
+            <area shape="circle" coords="472,232,159" alt="Lê Bảo Hồng Hạnh" href="./members/22120094/22120094.html" title="Lê Bảo Hồng Hạnh">
+            <area shape="circle" coords="707,206,152" alt="Ma Thanh Nhi" href="./members/22120256/22120256.html" title="Ma Thanh Nhi">
+          </map>
+        </div>
+      </div>
+  
+      <div class="info-section">
+        <div class="section group-info">
+          <div class="sub-header">Group Details</div>
+          <ul id="group-info">
+            <li><strong>Group Name:</strong> NHN</li>
+            <li><strong>Course:</strong> Web Application Development</li>
+            <li><strong>Team Size:</strong> 3</li>
+          </ul>
+        </div>
+  
+        <div class="section card-list">
+          <div class="sub-header">Team Members</div>
+          <div class="member-card">
+            <div class="member-info">
+              <div class="member-name">Nguyễn Minh Nhật</div>
+              <div class="member-studentId">Student ID: 22120094</div>
+            </div>
+            <button class="profile-button" onclick="window.location.href='./members/22120253/22120253.html'">View Profile</button>
+          </div>
+          <div class="member-card">
+            <div class="member-info">
+              <div class="member-name">Lê Bảo Hồng Hạnh</div>
+              <div class="member-studentId">Student ID: 22120253</div>
+            </div>
+            <button class="profile-button" onclick="window.location.href='./members/22120094/22120094.html'">View Profile</button>
+          </div>
+          <div class="member-card">
+            <div class="member-info">
+              <div class="member-name">Ma Thanh Nhi</div>
+              <div class="member-studentId">Student ID: 22120256</div>
+            </div>
+            <button class="profile-button" onclick="window.location.href='./members/22120256/22120256.html'">View Profile</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
